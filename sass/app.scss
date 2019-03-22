@@ -1,6 +1,30 @@
+//Extra Life Branding
+//Branding Guide included in public folder
+
+// VARIABLES
+$navy: #1a4c6d;
+$midBlue: #4074c2;
+$lightBlue: #26c2eb;
+$lightGreen: #7fd836;
+$nunitoFont: 'Nunito', sans-serif;
+@font-face {
+  font-family: "Furore";
+  src: url("../public/font/Furore.otf");
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("../public/font/Cantarell-Regular.ttf");
+}
+@font-face {
+  font-family: "AG Book Light";
+  src: url("../public/font/AGBookBQ-Light.otf");
+}
+
+// END VARIABLES
+
+
 body {
-  color: red;
   h1 {
-    color: green;
+    font-family: "Furore", sans-serif;
   }
 }
