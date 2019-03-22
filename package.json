@@ -1,0 +1,26 @@
+{
+  "name": "extra_life_donation_handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahabing/extra_life_donation_handler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahabing/extra_life_donation_handler/issues"
+  },
+  "homepage": "https://github.com/sarahabing/extra_life_donation_handler#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-sass": "^4.11.0",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.18.10",
+    "pug": "^2.0.3"
+  }
+}
