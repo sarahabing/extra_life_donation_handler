@@ -1,7 +1,7 @@
-const express = require('express')
+import express from 'express';
 const app = express();
-const path = require('path');
-const sass = require('node-sass-middleware');
+import path from 'path';
+import sass from 'node-sass-middleware';
 
 const index = require ('./routes/index');
 

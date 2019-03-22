@@ -6,5 +6,117 @@
   font-family: "Cantarell";
   src: url("../public/font/Cantarell-Regular.ttf"); }
 
-body h1 {
-  font-family: "Furore", sans-serif; }
+@font-face {
+  font-family: "AG Book Light";
+  src: url("../public/font/AGBookBQ-Light.otf"); }
+
+.visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "AG Book Light", sans-serif;
+  color: white; }
+
+h1 {
+  font-family: "Furore", sans-serif;
+  color: #26c2eb; }
+
+header {
+  background: #1a4c6d;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  header .logo {
+    max-width: 100%; }
+  header h2 {
+    display: inline; }
+  header #nav-icon {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer; }
+  header #nav-icon span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out; }
+  header #nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center; }
+  header #nav-icon span:nth-child(2) {
+    top: 18px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center; }
+  header #nav-icon span:nth-child(3) {
+    top: 36px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center; }
+  header #nav-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px; }
+  header #nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0; }
+  header #nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px; }
+
+body {
+  background-image: url("/backgrounds/Blue Grid Pattern 8.5x11.png"); }
+
+#main {
+  text-align: center; }
+
+footer {
+  background-color: #1a4c6d;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center; }

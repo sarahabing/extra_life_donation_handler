@@ -1,8 +1,30 @@
 doctype html
 head
-    title="Sarah Abing"
+    title="Extra Life"
     link(href='app.css', rel='stylesheet')
     link(href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet")
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet")
 body
-    h1 Sarah Abing
-    #container
+    header.row
+        h1.visuallyHidden Extra Life
+        div.col-sm-3
+            img(src="/logo/Extra Life_white.png" class="logo")
+        div.col-sm-6
+            h2 Team name
+        div.col-sm-3
+            div(id="nav-icon" class="closed" onClick="this.classList.toggle('open')")
+                span
+                span
+                span
+    main#main.row
+        div.col-sm-3
+        div.col-sm-6
+            h1 Extra Life
+        div.col-sm-3
+
+    footer.row
+        div.col-sm-3
+        div.col-sm-6
+            span boi
+        div.col-sm-3
+
