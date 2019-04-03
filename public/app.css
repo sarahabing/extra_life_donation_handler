@@ -31,7 +31,7 @@ h1 {
 
 header {
   background: #1a4c6d;
-  padding: 1.5em;
+  padding: 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ header {
   header #nav-icon span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 4px;
     width: 100%;
     background: #fff;
     border-radius: 9px;
@@ -113,6 +113,42 @@ body {
 #main {
   text-align: center; }
 
+.info-box {
+  background-color: #26c2eb;
+  border: 5px inset #4074c2;
+  margin: 0 1em;
+  padding: 1em;
+  text-align: center;
+  max-height: 300px;
+  overflow: scroll; }
+  .info-box .progress-bar {
+    background-image: linear-gradient(#7ae522, #47b200);
+    background-color: #7fd836;
+    border-radius: 2rem;
+    border: 1px solid #1a4c6d; }
+  .info-box h2 {
+    font-family: "Furore", sans-serif;
+    text-align: left;
+    font-size: 16px; }
+  .info-box .donations {
+    text-align: left;
+    margin-bottom: 10px; }
+  .info-box .donation-heading {
+    font-family: "Furore", sans-serif;
+    text-align: left !important;
+    font-size: 16px;
+    display: inline; }
+  .info-box .buttonDonate {
+    background-color: #7fd836;
+    font-family: "Furore", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    font-size: 12px;
+    display: inline;
+    margin: 0 40px; }
+
 footer {
   background-color: #1a4c6d;
   position: fixed;
@@ -120,3 +156,62 @@ footer {
   right: 0;
   left: 0;
   text-align: center; }
+
+.extra-space {
+  padding-bottom: 2em; }
+
+.member-card {
+  border: 1px solid #26c2eb;
+  background-color: #1a4c6d;
+  padding: 10px 0;
+  display: inline-block;
+  margin: 0 10px; }
+  .member-card .avatar {
+    height: 100px; }
+
+.donation-card {
+  border: 1px solid #1a4c6d;
+  background-color: #fff;
+  padding: 10px 0; }
+  .donation-card .avatar {
+    width: 71px;
+    float: left;
+    clear: both; }
+  .donation-card .col-sm-6 div {
+    color: #4074c2;
+    font-family: "Nunito", sans-serif; }
+  .donation-card .col-sm-6 .green-text {
+    color: #7fd836; }
+
+.card-divider {
+  margin-bottom: 10px; }
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 16px !important;
+    padding: 1em; }
+  header {
+    padding: 1.5em; }
+    header .logo {
+      float: left;
+      max-width: 45%;
+      clear: both; }
+    header #nav-icon {
+      display: inline;
+      float: right;
+      clear: both;
+      margin: -44px auto; }
+  .donation-card {
+    border: 1px solid #1a4c6d;
+    background-color: #fff;
+    padding: 10px 0; }
+    .donation-card .avatar {
+      width: 25%;
+      float: left;
+      clear: both; }
+    .donation-card .col-sm-6 div {
+      color: #4074c2;
+      font-family: "Nunito", sans-serif;
+      font-size: 12px; }
+    .donation-card .col-sm-6 .green-text {
+      color: #7fd836; } }

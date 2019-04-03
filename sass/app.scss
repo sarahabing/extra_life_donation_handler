@@ -8,6 +8,10 @@ $lightBlue: #26c2eb;
 $lightGreen: #7fd836;
 $white: #fff;
 $nunitoFont: 'Nunito', sans-serif;
+
+//MEDIA QUERIES
+$mobile: 768px;
+
 @font-face {
   font-family: "Furore";
   src: url("../public/font/Furore.otf");
@@ -39,13 +43,13 @@ $nunitoFont: 'Nunito', sans-serif;
 
 h1 {
   font-family: "Furore", sans-serif;
-  color: #26c2eb;
+  color: $lightBlue;
 }
 
 
 header {
   background: $navy;
-  padding: 1.5em;
+  padding: 0 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +79,7 @@ header {
   #nav-icon span {
          display: block;
          position: absolute;
-         height: 9px;
+         height: 4px;
          width: 100%;
          background: $white;
          border-radius: 9px;
@@ -146,6 +150,49 @@ body {
   text-align: center;
 }
 
+.info-box {
+  background-color: $lightBlue;
+  border: 5px inset $midBlue;
+  margin: 0 1em;
+  padding: 1em;
+  text-align: center;
+  max-height: 300px;
+  overflow: scroll;
+  .progress-bar {
+    background-image: linear-gradient(#7ae522, #47b200);
+    background-color: #7fd836;
+    border-radius: 2rem;
+    border: 1px solid $navy;
+  }
+  h2 {
+    font-family: "Furore", sans-serif;
+    text-align: left;
+    font-size: 16px;
+  }
+  .donations {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .donation-heading {
+    font-family: "Furore", sans-serif;
+    text-align: left !important;
+    font-size: 16px;
+    display: inline;
+  }
+
+  .buttonDonate {
+    background-color: $lightGreen;
+    font-family: "Furore", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    font-size: 12px;
+    display: inline;
+    margin: 0 40px;
+  }
+}
+
 footer {
   background-color: $navy;
   position: fixed;
@@ -154,3 +201,90 @@ footer {
   left: 0;
   text-align: center;
 }
+.extra-space{
+  padding-bottom: 2em;
+}
+.member-card {
+  border: 1px solid $lightBlue;
+  background-color: $navy;
+  padding: 10px 0;
+  display: inline-block;
+  margin: 0 10px;
+  .avatar {
+    height: 100px;
+  }
+}
+
+.donation-card {
+  border: 1px solid $navy;
+  background-color: $white;
+  padding: 10px 0;
+
+  .avatar {
+    width: 71px;
+    float: left;
+    clear: both;
+  }
+  .col-sm-6 {
+    div {
+      color: $midBlue;
+      font-family: $nunitoFont;
+      //font-size: 12px;
+    }
+    .green-text {
+      color: $lightGreen;
+    }
+  }
+}
+.card-divider {
+  margin-bottom: 10px;
+}
+
+
+
+
+@media only screen and (max-width: $mobile){
+
+  h1 {
+    font-size: 16px !important;
+    padding: 1em;
+  }
+  header {
+    padding: 1.5em;
+    .logo {
+      float: left;
+      max-width: 45%;
+      clear: both;
+
+    }
+    #nav-icon{
+      display: inline;
+      float: right;
+      clear: both;
+      margin: -44px auto;
+    }
+  }
+
+  .donation-card {
+    border: 1px solid $navy;
+    background-color: $white;
+    padding: 10px 0;
+    .avatar {
+      width: 25%;
+      float: left;
+      clear: both;
+    }
+    .col-sm-6 {
+      div {
+        color: $midBlue;
+        font-family: $nunitoFont;
+        font-size: 12px;
+      }
+      .green-text {
+        color: $lightGreen;
+      }
+    }
+  }
+
+}
+

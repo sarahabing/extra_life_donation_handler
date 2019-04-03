@@ -1,30 +1,73 @@
 doctype html
 head
     title="Extra Life"
-    link(href='app.css', rel='stylesheet')
     link(href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet")
     link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet")
+    link(href='app.css', rel='stylesheet')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
 body
     header.row
         h1.visuallyHidden Extra Life
-        div.col-sm-3
+        div.col-sm-3.col-xs-3
             img(src="/logo/Extra Life_white.png" class="logo")
-        div.col-sm-6
-            h2 Team name
-        div.col-sm-3
+        div.col-sm-6.col-xs-3
+            h2.visuallyHidden=body.name
+        div.col-sm-3.col-xs-3
             div(id="nav-icon" class="closed" onClick="this.classList.toggle('open')")
                 span
                 span
                 span
-    main#main.row
-        div.col-sm-3
-        div.col-sm-6
-            h1 Extra Life
-        div.col-sm-3
+    main#main
+    div.row
+        div.col-sm-12
+            h1.text-center Extra Life Donation Handler
+
+    div.info-box
+        div.col-sm-12
+            h2 Donation Counter
+            div.extra-space
+            div.progress-bar
+                span &nbsp
+            div="$" + body.sumDonations + " / " + "$" + body.fundraisingGoal
+
+    div.row.extra-space
+
+    div.info-box
+            div.donations
+                h2.donation-heading Donations
+                a(href="https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=44021" class="buttonDonate" target="_blank")  + Donate
+            div.extra-space
+            each donation in donations
+                div.donation-card.col-sm-12
+                    div.col-sm-6
+                        img(src=donation.avatarImageURL class="avatar")
+                    div.
+                    div.col-sm-6.offset-sm-3
+                        div=donation.displayName
+                        div.green-text="$" + donation.amount + ".00"
+                        div="'" + donation.message + "'"
+                div.card-divider
+
+    div.row.extra-space
+
+    div.info-box
+        div.donations
+            h2.donation-heading Roster
+            a(href="https://www.extra-life.org/index.cfm?fuseaction=register.start&eventID=543&teamID=44021" class="buttonDonate" target="_blank")  + Join
+        div.extra-space
+            each member in roster
+                div.member-card.col-sm-3
+                        img(src=member.avatarImageURL class="avatar")
+                        div=member.displayName
+        div.card-divider
+
+
+
 
     footer.row
         div.col-sm-3
         div.col-sm-6
-            span boi
+            span Created By Sarah Abing
         div.col-sm-3
 
